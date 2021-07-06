@@ -114,4 +114,5 @@ button:hover {
 	height: 50px;
 	width: 50px;
 	margin: 0 auto;
+	border:1px solid #000;
 }
