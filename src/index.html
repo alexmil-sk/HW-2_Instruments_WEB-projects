@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./styles/style.css" rel="stylesheet" type="text/css">
+	<title>ДЗ-2. Калькулятор дат/Таймер</title>
+</head>
+<body>
+	<div class="wrapper">
+		<a href="../index.html" class="btn-home"></a>
+		<h1>Применение системы модулей на практике</h1>
+		<button onclick="show" class="mainBtn" id="mainBtn">Таймер / Калькулятор дат</button>
+		<form class="calcDate" id="calcForm">
+			<h2>Калькулятор дат</h2>
+			<div class="calcDate__item">
+				<label for="date1">
+					<strong>Первая дата</strong>
+					<input type="date" name="date1" id="date1">
+				</label>
+				<label for="date2">
+					<strong>Вторая дата</strong>
+					<input type="date" name="date2" id="date2">
+				</label>
+				<button type="submit">Рассчитать промежуток</button>
+			</div>
+			<h2 id="datecalc__result"></h2>
+		</form>
+		<form class="timer hide" id="timerForm">
+			<h2>Таймер отсчета до указанной даты</h2>
+			<div class="timer__item">
+				<label for="timer1">
+					<p><strong>Текущая дата</strong></p>
+					<h3 type="date" name="timerDate1" id="timerDate1"></h3>
+					
+				</label>
+				<label for="timer2">
+					<p><strong>Конечная дата</strong></p>
+					<input type="date" name="timerDate2" id="timerDate2">
+				</label>
+				<button onclick="TimerX" id="setTimer">Сброс</button>
+				<button onclick="" id="pauseTimer">Стоп</button>
+			</div>
+			<h3 id="timer__result1" class=""></h3>
+			<hr>
+			<h2>Таймер (секундомер) обратного отсчета</h2>
+			<div class="timer2">
+				<button onclick="" id="startTimer2">Установка времени таймера</button>
+				<h1 id="timer__result2" class="">00 : 00</h1>
+				<button id="stopTimer2">Стоп</button>
+			</div>
+		</form>
+	</div>
+
+
+</body>
+</html>
