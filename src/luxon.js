@@ -7345,7 +7345,9 @@ class DateTime {
   }
 
 }
-
+/**
+ * @private
+ */
 
 
 function friendlyDateTime(dateTimeish) {
@@ -7372,13 +7374,3 @@ export { Settings };
 export { Zone }; //# sourceMappingURL=luxon.js.map
 
 export default _exp;
-
-
-
-
-
-
-
-
-
-

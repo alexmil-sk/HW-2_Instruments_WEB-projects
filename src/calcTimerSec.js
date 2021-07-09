@@ -1,5 +1,7 @@
 "use strict ";
 
+import './luxon';
+
 //!__TIMER__Sec__________________________________________________________________
 
 const set2 = document.querySelector('#timer__result2');
@@ -38,10 +40,11 @@ const f = startTimer2.addEventListener('click', (e) => {
 
 function soundClick() {
 	let audio = new Audio();
-	audio.src = './assets/sound/horn.mp3';
+	audio.src = './src/assets/sound/horn.mp3';
 	audio.autoplay = true;
 	setInterval(() => {
 		set2.classList.toggle('red');
 	}, 1000);
+	console.log(audio.src);
 
 }

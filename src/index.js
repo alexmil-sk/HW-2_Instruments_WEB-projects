@@ -1,8 +1,10 @@
 "use strict ";
 
+//import * as $ from 'jquery';
 import HomeBtn from './assets/img/home.svg';
 import './styles/style.css';
-import './luxon.js';
-import './calcDate.js';
-import './calcTimerDate.js';
-import './calcTimerSec.js';
+import './styles/style.scss';
+import './luxon';
+import './calcDate';
+import './calcTimerDate';
+import './calcTimerSec';

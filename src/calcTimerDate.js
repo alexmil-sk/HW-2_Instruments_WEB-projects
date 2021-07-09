@@ -1,7 +1,11 @@
 "use strict ";
 
-//!__ТАЙМЕР__Date___________________________________________
+import { errorFormat } from './error';
 
+//!__ТАЙМЕР__Date___________________________________________
+//const errorFormat = text => `
+//	<span class="error">${ text }</span>
+//	`;
 
 const TimerX = setInterval(() => {
 	const set1 = document.querySelector('#timer__result1');
@@ -9,6 +13,7 @@ const TimerX = setInterval(() => {
 	const timerDate2 = document.querySelector('#timerDate2');
 	const pauseTimer = document.querySelector('#pauseTimer');
 	const restartTimer = document.querySelector('#restartTimer');
+	const resetTimer = document.querySelector('#resetTimer');
 	let endTimer = new Date(timerDate2.value).getTime();
 	let startTimer = new Date().getTime();
 
@@ -25,10 +30,10 @@ const TimerX = setInterval(() => {
 		m = '0' + m;
 	}
 
-	timerDate1.innerHTML = m + ' / ' + d + ' / ' + y;
-
+	timerDate1.innerHTML = d + ' / ' + m + ' / ' + y;
+	let difference = endTimer - startTimer;
 	if (endTimer) {
-		let difference = endTimer - startTimer;
+		//let difference = endTimer - startTimer;
 		let day = Math.floor(difference / (1000 * 60 * 60 * 24));
 		let hour = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 		let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
@@ -42,14 +47,21 @@ const TimerX = setInterval(() => {
 			set1.innerHTML = 'Отсчет закончен';
 		}
 	} else {
-		set1.innerHTML = errorFormat('Укажите конечную дату отсчета');
-		set1.classList.add('error');
+		set1.innerHTML = errorFormat('Укажите конечную дату отсчета!');
 	}
+
+	if (difference < 0) {
+		set1.innerHTML = errorFormat('Введите конечную дату отсчета находящуюся в будущем временном периоде!');
+	} 
 
 	pauseTimer.addEventListener('click', (e) => {
 		e.preventDefault();
 		set1.classList.add('error');
 		clearInterval(TimerX);
+	});
+
+	resetTimer.addEventListener('click', (e) => {
+		set1.innerHTML = '';
 	});
 
 }, 1000);

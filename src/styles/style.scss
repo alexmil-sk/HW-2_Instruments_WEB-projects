@@ -1,0 +1,14 @@
+
+$border: 1px solid #000;
+.box {
+	padding: 1rem;
+	border-radius: 5px;
+	margin-top: 1rem;
+	outline: $border;
+	background-color:mediumorchid;
+	h2 {
+		text-align: center;
+		color: #fff;
+		background-color: transparent !important;
+	}
+}

@@ -1,3 +1,6 @@
+@import './roboto.css';
+@import '~normalize.css';
+
 .wrapper {
 	width: 100%;
 	min-height: 70vh;
@@ -9,6 +12,7 @@
 
 .timer,
 .calcDate {
+	font-family: Roboto-Thin, sans-serif;
 	width: 50%;
 	min-height: 362px;
 	background-color: #fff;
@@ -41,6 +45,7 @@
 
 h1 {
 	text-align: center;
+	font-family: Roboto-Black, sans-serif;
 }
 
 .error {
@@ -73,6 +78,9 @@ h1 {
 	color: #fff;
 }
 
+.strong {
+	font-family: Roboto-Regular, sans-serif;
+}
 
 .blue {
 	background-color: blue;
@@ -98,6 +106,7 @@ h1 {
 }
 
 h2 {
+	font-family: Roboto-Bold, sans-serif;
 	margin-top: 20px;
 	text-align: center;
 	background-color: lightgreen;
