@@ -1,8 +1,5 @@
 "use strict ";
 
-import './luxon';
-
-//!__TIMER__Sec__________________________________________________________________
 
 const set2 = document.querySelector('#timer__result2');
 const startTimer2 = document.querySelector('#startTimer2');
