@@ -2,10 +2,6 @@
 
 import { errorFormat } from './error';
 
-//!__ТАЙМЕР__Date___________________________________________
-//const errorFormat = text => `
-//	<span class="error">${ text }</span>
-//	`;
 
 const TimerX = setInterval(() => {
 	const set1 = document.querySelector('#timer__result1');
